@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Math Hub | Diameter</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="images/logo.png">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<!--==========================================
+                    NAVBAR
+===========================================-->
+
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="images/logo.png"
+                     alt="Math Hub Logo">
+
+                <h2>Math Hub</h2>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="calculator.html">Calculator</a></li>
+
+                <li><a href="diameter.html" class="active">Diameter</a></li>
+
+                <li><a href="area.html">Area</a></li>
+
+                <li><a href="perimeter.html">Perimeter</a></li>
+
+                <li><a href="volume.html">Volume</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!--==========================================
+                    HERO
+===========================================-->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>Diameter Calculator</h1>
+
+        <p>
+
+            Learn the formulas used to solve the diameter
+            of a circle, then calculate the answer using
+            the interactive calculator below.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!--==========================================
+                FORMULA SECTION
+===========================================-->
+
+<section class="formula-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Diameter Formulas</h2>
+
+            <p>
+
+                Different formulas can be used depending
+                on the information that is given.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- TOP CARD -->
+
+        <div class="single-row">
+
+            <div class="formula-card">
+
+                <h3>Main Formula</h3>
+
+                <div class="formula">
+
+                    d = 2r
+
+                </div>
+
+                <p>
+
+                    Use this formula when
+                    the radius is known.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BOTTOM ROW -->
+
+        <div class="row">
+
+            <div class="formula-card">
+
+                <h3>Using Circumference</h3>
+
+                <div class="formula">
+
+                    d = C ÷ π
+
+                </div>
+
+            </div>
+
+
+
+            <div class="formula-card">
+
+                <h3>Using Area</h3>
+
+                <div class="formula">
+
+                    d = 2√(A ÷ π)
+
+                </div>
+
+            </div>
+
+
+
+            <div class="formula-card">
+
+                <h3>Relationship</h3>
+
+                <div class="formula">
+
+                    r = d ÷ 2
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
+            CALCULATOR SECTION
+===========================================-->
+
+<section class="calculator-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Diameter Calculator</h2>
+
+            <p>
+
+                Select the given value below and calculate
+                the diameter instantly.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- TOP CARD -->
+
+        <div class="single-row">
+
+            <div class="calc-card">
+
+                <h3>Radius to Diameter</h3>
+
+                <label>Radius</label>
+
+                <input
+                    type="number"
+                    id="radiusInput"
+                    placeholder="Enter radius">
+
+                <button onclick="calculateDiameterRadius()">
+
+                    Calculate
+
+                </button>
+
+                <div
+                    class="result"
+                    id="radiusResult">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BOTTOM ROW -->
+
+        <div class="row">
+
+            <div class="calc-card">
+
+                <h3>Circumference to Diameter</h3>
+
+                <label>Circumference</label>
+
+                <input
+                    type="number"
+                    id="circumferenceInput"
+                    placeholder="Enter circumference">
+
+                <button onclick="calculateDiameterCircumference()">
+
+                    Calculate
+
+                </button>
+
+                <div
+                    class="result"
+                    id="circumferenceResult">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="calc-card">
+
+                <h3>Area to Diameter</h3>
+
+                <label>Area</label>
+
+                <input
+                    type="number"
+                    id="areaInput"
+                    placeholder="Enter area">
+
+                <button onclick="calculateDiameterArea()">
+
+                    Calculate
+
+                </button>
+
+                <div
+                    class="result"
+                    id="areaResult">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="calc-card">
+
+                <h3>Radius Relationship</h3>
+
+                <label>Diameter</label>
+
+                <input
+                    type="number"
+                    id="diameterInput"
+                    placeholder="Enter diameter">
+
+                <button onclick="calculateRadiusFromDiameter()">
+
+                    Calculate
+
+                </button>
+
+                <div
+                    class="result"
+                    id="diameterResult">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--==========================================
+                    FOOTER
+===========================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <h2>Math Hub</h2>
+
+        <p>
+
+            Designed and Developed by
+
+            <strong>Christine Joy Villaflor Sarita</strong>
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/geometry.js"></script>
+
+</body>
+
+</html>

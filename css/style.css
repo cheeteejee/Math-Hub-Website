@@ -1,0 +1,1120 @@
+/*==========================================================
+                    MATH HUB V2
+        Designed by Christine Joy Villaflor Sarita
+==========================================================*/
+
+
+/*==========================================================
+                    GOOGLE FONT
+==========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==========================================================
+                    RESET
+==========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#fff9fc;
+
+    color:#333;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+
+/*==========================================================
+                    VARIABLES
+==========================================================*/
+
+:root{
+
+    --primary:#d94f8a;
+
+    --primary-dark:#c53d79;
+
+    --light:#ffe8f1;
+
+    --background:#fff9fc;
+
+    --white:#ffffff;
+
+    --text:#333333;
+
+    --gray:#666666;
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+    --radius:25px;
+
+    --transition:.35s ease;
+
+}
+
+
+
+/*==========================================================
+                    GLOBAL
+==========================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:80px 0;
+
+}
+
+
+/*==========================================================
+                    HEADINGS
+==========================================================*/
+
+h1{
+
+    font-size:3.3rem;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-size:2.1rem;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+h3{
+
+    font-size:1.25rem;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+p{
+
+    color:var(--gray);
+
+    font-size:17px;
+
+}
+
+
+/*==========================================================
+                    NAVIGATION
+==========================================================*/
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.navbar{
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.logo h2{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-links .active{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+
+/*==========================================================
+                    HERO
+==========================================================*/
+
+.hero{
+
+    text-align:center;
+
+    padding:100px 0;
+
+}
+
+.hero-logo{
+
+    width:140px;
+
+    margin:0 auto 25px;
+
+}
+
+.hero p{
+
+    width:70%;
+
+    margin:auto;
+
+    font-size:18px;
+
+}
+
+
+/*==========================================================
+                HERO BUTTONS
+==========================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==========================================================
+                    BUTTON SYSTEM
+==========================================================*/
+
+.btn,
+button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:220px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,var(--primary),#ff7fb4);
+
+    color:var(--white);
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:0 10px 25px rgba(217,79,138,.25);
+
+}
+
+.btn:hover,
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(217,79,138,.35);
+
+}
+
+.secondary-btn{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+    box-shadow:none;
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+/*==========================================================
+                    INPUTS
+==========================================================*/
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:15px;
+
+    border:2px solid #e7e7e7;
+
+    border-radius:15px;
+
+    outline:none;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+    transition:var(--transition);
+
+}
+
+input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 12px rgba(217,79,138,.20);
+
+}
+
+
+
+/*==========================================================
+                    CARD SYSTEM
+==========================================================*/
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/*==========================================================
+                    SECTION TITLE
+==========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+
+/*==========================================================
+                    FEATURE GRID
+==========================================================*/
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature-card p{
+
+    margin-top:10px;
+
+}
+
+
+
+/*==========================================================
+                    WHY SECTION
+==========================================================*/
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.why-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*==========================================================
+                FORMULA SECTION
+==========================================================*/
+
+.formula-section{
+
+    text-align:center;
+
+}
+
+.formula-box{
+
+    background:var(--white);
+
+    padding:45px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.formula-box p{
+
+    margin-bottom:40px;
+
+}
+
+.formula-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.formula-card{
+
+    background:var(--light);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    transition:var(--transition);
+
+}
+
+.formula-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.formula-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.formula-card p{
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+
+
+/*==========================================================
+                CALCULATOR SECTION
+==========================================================*/
+
+.calculator-section{
+
+    margin-top:80px;
+
+}
+
+
+
+/*==========================================================
+                ROW SYSTEM
+==========================================================*/
+
+.row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/*==========================================================
+                CALCULATOR CARD
+==========================================================*/
+
+.calc-card{
+
+    width:380px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.calc-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.calc-card h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/*==========================================================
+                DIAMETER LAYOUT (1-3)
+==========================================================*/
+
+.single-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:30px;
+
+}
+
+.single-row .calc-card{
+
+    width:420px;
+
+}
+
+
+
+/*==========================================================
+                AREA / PERIMETER / VOLUME
+                    LAYOUT (1-2-2)
+==========================================================*/
+
+.double-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/*==========================================================
+                RESULT BOX
+==========================================================*/
+
+.result{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    background:#fff7fa;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:15px;
+
+    min-height:150px;
+
+    color:#444;
+
+    line-height:1.8;
+
+    word-break:break-word;
+
+}
+
+
+
+/*==========================================================
+                FORMULA DISPLAY
+==========================================================*/
+
+.formula{
+
+    background:#fff3f8;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+/*==========================================================
+                    ABOUT PAGE
+==========================================================*/
+
+.about-section{
+
+    padding:80px 0;
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.about-card{
+
+    background:var(--white);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-card img{
+
+    width:250px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin:0 auto 25px;
+
+    border:6px solid var(--light);
+
+}
+
+.about-card h2,
+.about-card h3,
+.about-card p{
+
+    text-align:center;
+
+}
+
+
+
+/*==========================================================
+                SCIENTIFIC CALCULATOR
+==========================================================*/
+
+.calculator-container{
+
+    max-width:500px;
+
+    margin:0 auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.calculator-display{
+
+    width:100%;
+
+    height:70px;
+
+    border:none;
+
+    background:#f8f8f8;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    font-size:28px;
+
+    text-align:right;
+
+    margin-bottom:25px;
+
+}
+
+.calculator-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+.calculator-buttons button{
+
+    width:100%;
+
+    height:65px;
+
+}
+
+
+
+/*==========================================================
+                    FOOTER
+==========================================================*/
+
+.footer{
+
+    margin-top:100px;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:50px 0;
+
+}
+
+.footer .container{
+
+    text-align:left;
+
+}
+
+.footer h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.footer p{
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+/*==========================================================
+                    ANIMATIONS
+==========================================================*/
+
+.card,
+.feature-card,
+.why-card,
+.calc-card,
+.formula-card,
+.about-card{
+
+    transition:all .35s ease;
+
+}
+
+.card:hover,
+.feature-card:hover,
+.why-card:hover,
+.calc-card:hover,
+.formula-card:hover,
+.about-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/*==========================================================
+                    RESPONSIVE
+==========================================================*/
+
+@media(max-width:1100px){
+
+    .feature-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .why-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .formula-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.5rem;
+
+    }
+
+    h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .hero p{
+
+        width:100%;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px 0;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        margin-top:20px;
+
+        gap:18px;
+
+    }
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .formula-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .double-row{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .calc-card{
+
+        width:100%;
+
+    }
+
+    .single-row .calc-card{
+
+        width:100%;
+
+    }
+
+}
+
+
+
+@media(max-width:500px){
+
+    .hero{
+
+        padding:70px 0;
+
+    }
+
+    .hero-logo{
+
+        width:110px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .calculator-buttons{
+
+        gap:10px;
+
+    }
+
+    .calculator-buttons button{
+
+        height:55px;
+
+        font-size:16px;
+
+    }
+
+}
